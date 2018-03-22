@@ -1,0 +1,2 @@
+FROM litaio/lita
+
