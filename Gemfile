@@ -9,6 +9,7 @@ gem 'lita-ai'
 gem 'lita-whois'
 gem 'lita-docker', path: 'lita-docker'
 gem 'lita-nginx', path: 'lita-nginx'
+gem 'lita-top', path: 'lita-top'
 
 # Uncomment to use the Hip§§§hat adapter
 # gem "lita-hipchat"
