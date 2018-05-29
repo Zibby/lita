@@ -6,9 +6,18 @@ pipeline {
 
   }
   stages {
-    stage('') {
-      steps {
-        fileExists 'lita_config.rb'
+    stage('error') {
+      parallel {
+        stage('error') {
+          steps {
+            fileExists 'lita_config.rb'
+          }
+        }
+        stage('qoo') {
+          steps {
+            isUnix()
+          }
+        }
       }
     }
   }
