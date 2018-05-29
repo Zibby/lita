@@ -10,6 +10,12 @@ PATH
     lita-nginx (0.1.0)
       lita (>= 4.7)
 
+PATH
+  remote: lita-top
+  specs:
+    lita-top (0.1.0)
+      lita (>= 4.7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -95,6 +101,7 @@ DEPENDENCIES
   lita-flip
   lita-nginx!
   lita-slack
+  lita-top!
   lita-whois
   mail
   sinatra
