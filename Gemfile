@@ -10,6 +10,7 @@ gem 'lita-whois'
 gem 'lita-docker', path: 'lita-docker'
 gem 'lita-nginx', path: 'lita-nginx'
 gem 'lita-top', path: 'lita-top'
+gem 'rubocop'
 
 # Uncomment to use the Hip§§§hat adapter
 # gem "lita-hipchat"
