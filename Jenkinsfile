@@ -21,7 +21,9 @@ pipeline {
         }
         stage('bundle') {
           steps {
-            sh 'bundle install'
+            sh '''
+
+ echo $HOME && bundle install --path ~/.gem'''
           }
         }
       }
