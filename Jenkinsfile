@@ -16,6 +16,7 @@ pipeline {
         stage('qoo') {
           steps {
             isUnix()
+            sh 'pwd'
           }
         }
         stage('bundle') {
