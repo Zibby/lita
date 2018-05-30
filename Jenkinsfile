@@ -23,7 +23,7 @@ pipeline {
           steps {
             sh '''
 
- echo $HOME && bundle install --path ~/.gem'''
+ echo $HOME && bundle install --path ./.gem'''
           }
         }
       }
