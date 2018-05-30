@@ -24,7 +24,7 @@ pipeline {
             sh '''
 
  echo $HOME && bundle install --path ./.gem'''
-            sh 'bundle exec rubocop'
+            sh 'sudo bundle exec rubocop'
           }
         }
       }
