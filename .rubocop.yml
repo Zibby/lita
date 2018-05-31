@@ -46,7 +46,7 @@ FileName:
   Enabled: false
 TrailingCommaInArguments:
   Enabled: false
-TrailingCommaInLiteral:
+TrailingCommaInHashLiteral:
   Enabled: false
 TrivialAccessors:
   Enabled: false
