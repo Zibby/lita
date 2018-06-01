@@ -10,20 +10,17 @@ pipeline {
       parallel {
         stage('git pull') {
           steps {
-            sh '/usr/bin/git pull'
-          }
-        }
-        stage('qoo') {
-          steps {
-            isUnix()
-            sh 'pwd'
+            sh 'git pull'
           }
         }
         stage('bundle') {
           steps {
             sh '''
-
- echo $HOME && bundle install --path ./.gem'''
+bundle install --path ./.gem'''
+          }
+        }
+        stage('rubocop') {
+          steps {
             sh 'HOME=./ bundle exec rubocop'
           }
         }
