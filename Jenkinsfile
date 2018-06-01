@@ -11,6 +11,7 @@ pipeline {
         stage('error') {
           steps {
             fileExists 'lita_config.rb'
+            sh 'git pull'
           }
         }
         stage('qoo') {
