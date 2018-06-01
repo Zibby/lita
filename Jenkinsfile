@@ -6,24 +6,12 @@ pipeline {
 
   }
   stages {
-    stage('error') {
-      parallel {
-        stage('git pull') {
-          steps {
-            sh 'git pull'
-          }
-        }
-        stage('bundle') {
-          steps {
-            sh '''
-bundle install --path ./.gem'''
-          }
-        }
-        stage('rubocop') {
-          steps {
-            sh 'HOME=./ bundle exec rubocop'
-          }
-        }
+    stage('git pull') {
+      steps {
+        sh 'git pull'
+        sh 'bundle install --path ./.gem'
+        sh 'HOME=./ bundle exec rubocop'
+        cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, cleanupMatrixParent: true, deleteDirs: true)
       }
     }
   }
