@@ -8,10 +8,9 @@ pipeline {
   stages {
     stage('error') {
       parallel {
-        stage('error') {
+        stage('git pull') {
           steps {
-            fileExists 'lita_config.rb'
-            sh 'git pull'
+            sh '/usr/bin/git pull'
           }
         }
         stage('qoo') {
