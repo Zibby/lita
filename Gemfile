@@ -1,24 +1,26 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
 
-gem "lita"
-gem "lita-slack"
-gem 'sinatra'
-gem 'mail'
-gem "lita-flip"
+source 'https://rubygems.org'
+
+gem 'lita'
 gem 'lita-ai'
-gem 'lita-whois'
 gem 'lita-docker', path: 'lita-docker'
+gem 'lita-flip'
 gem 'lita-nginx', path: 'lita-nginx'
+gem 'lita-slack'
 gem 'lita-top', path: 'lita-top'
+gem 'lita-whois'
+gem 'mail'
 gem 'rubocop'
+gem 'sinatra'
 
-# Uncomment to use the Hip§§§hat adapter
-# gem "lita-hipchat"
+# Uncomment to use the HipChat adapter
+# gem 'lita-hipchat'
 
 # Uncomment to use the IRC adapter
-# gem "lita-irc"
+# gem 'lita-irc'
 
 # Add handlers to give Lita new functionality.
 # For example:
-# gem "lita-google-images"
-# gem "lita-karma"
+# gem 'lita-google-images'
+# gem 'lita-karma'

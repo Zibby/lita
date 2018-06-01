@@ -6,27 +6,12 @@ pipeline {
 
   }
   stages {
-    stage('error') {
-      parallel {
-        stage('error') {
-          steps {
-            fileExists 'lita_config.rb'
-          }
-        }
-        stage('qoo') {
-          steps {
-            isUnix()
-            sh 'pwd'
-          }
-        }
-        stage('bundle') {
-          steps {
-            sh '''
-
- echo $HOME && bundle install --path ./.gem'''
-            sh 'HOME=./ bundle exec rubocop'
-          }
-        }
+    stage('git pull') {
+      steps {
+        sh 'git pull'
+        sh 'bundle install --path ./.gem'
+        sh 'HOME=./ bundle exec rubocop'
+        cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, cleanupMatrixParent: true, deleteDirs: true)
       }
     }
   }
