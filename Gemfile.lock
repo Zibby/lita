@@ -103,7 +103,7 @@ GEM
       rack
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.3)
+    websocket-extensions (0.1.5)
     whois (4.0.5)
 
 PLATFORMS
